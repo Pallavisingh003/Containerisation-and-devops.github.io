@@ -1,5 +1,7 @@
 # LECTURE THEORY
 
+
+# Docker Commands & Flags – HandsOn Notes
 ## 1. Docker Basics
 
 ### Check Docker version
@@ -336,6 +338,251 @@ docker rm web
 <img width="1439" height="432" alt="Screenshot 2026-02-06 at 11 09 40 AM" src="https://github.com/user-attachments/assets/4124f45c-6fa9-4823-ba6a-70923460b0b2" />
 
 ---
-->By:
-Pallavi Singh
+
+
+
+
+# Preserving Changes Inside a Docker Container (Java Lab)
+
+## Objective
+
+Install Java inside a container, create an app, then convert the container into a reusable image for sharing and reuse.
+
+We will learn:
+
+- Container → Image conversion
+- Save / Load images
+- Export / Import difference
+- Best practices
+
+---
+
+## Scenario Overview
+
+You will:
+
+1. Start Ubuntu container
+2. Install Java compiler
+3. Create Java app in `/home/app`
+4. Convert container → image
+5. Reuse & share image
+
+---
+
+## 1. Run Base Ubuntu Container
+
+```bash
+docker run -it --name java_lab ubuntu:22.04 bash
+```
+You are now inside the container.
+
+---
+
+## 2. Install Java Compiler (Inside Container)
+
+```bash
+apt update
+apt install -y openjdk-17-jdk
+```
+
+Verify installation:
+
+```bash
+javac --version
+```
+![Uploading Screenshot 2026-02-06 at 12.01.07 PM.png…]()
+<img width="1440" height="854" alt="Screenshot 2026-02-06 at 12 04 58 PM" src="https://github.com/user-attachments/assets/d82b4c37-c1cb-45d5-a729-fd86c71ebbc6" />
+<img width="1436" height="868" alt="Screenshot 2026-02-06 at 12 05 09 PM" src="https://github.com/user-attachments/assets/b8388bc0-0c75-4770-8bb5-d7cfa8ab8e55" />
+<img width="1439" height="829" alt="Screenshot 2026-02-06 at 12 05 17 PM" src="https://github.com/user-attachments/assets/20706514-1af0-4627-832d-cc0169a2bd9b" />
+<img width="1440" height="869" alt="Screenshot 2026-02-06 at 12 05 39 PM" src="https://github.com/user-attachments/assets/990c7655-e8f0-489f-86dd-cb7b2a92b93b" />
+<img width="1440" height="837" alt="Screenshot 2026-02-06 at 12 07 22 PM" src="https://github.com/user-attachments/assets/08a4a6a8-9470-4c06-a37e-47d73f7ae9f9" />
+
+---
+
+## 3. Create Java App in /home/app
+
+```bash
+mkdir -p /home/app
+cd /home/app
+nano Hello.java
+```
+<img width="493" height="43" alt="Screenshot 2026-02-06 at 12 15 10 PM" src="https://github.com/user-attachments/assets/112cb312-c997-4658-85da-423dee2ab00c" />
+<img width="513" height="145" alt="Screenshot 2026-02-06 at 12 15 18 PM" src="https://github.com/user-attachments/assets/c1410e39-b9f6-4cb8-beb0-fbc572326f02" />
+
+
+Java code:
+
+```java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello from Docker container!");
+    }
+}
+```
+<img width="746" height="450" alt="Screenshot 2026-02-06 at 12 15 50 PM" src="https://github.com/user-attachments/assets/c392e09f-2ea5-4ade-9222-bd55939a3ca6" />
+
+Compile and run:
+
+```bash
+javac Hello.java
+java Hello
+```
+<img width="440" height="42" alt="Screenshot 2026-02-06 at 12 16 53 PM" src="https://github.com/user-attachments/assets/df0918c3-3c6b-45aa-b8f5-28bb59edb4ff" />
+
+Now the container contains:
+
+- Java installed
+- Java source file
+- Compiled program
+---
+
+## 4. Exit Container
+
+```bash
+exit
+```
+<img width="486" height="165" alt="Screenshot 2026-02-06 at 12 15 23 PM" src="https://github.com/user-attachments/assets/1945eceb-6156-47b7-9e66-8c3279c5d69d" />
+
+Container stops, but changes remain saved in that container.
+
+---
+
+## 5. Convert Container → Image
+
+This captures the container snapshot.
+
+```bash
+docker commit java_lab myrepo/java-app:1.0
+```
+<img width="567" height="115" alt="Screenshot 2026-02-06 at 12 18 18 PM" src="https://github.com/user-attachments/assets/dee2837c-fe7f-4e13-91dd-c45d0156fbaa" />
+
+Verify:
+
+```bash
+docker images
+```
+<img width="563" height="183" alt="Screenshot 2026-02-06 at 12 18 38 PM" src="https://github.com/user-attachments/assets/0382ab4d-24cb-4bbb-8ee1-75d6e8e7c9de" />
+
+A new reusable image now exists.
+
+---
+
+## 6. Reuse the Image
+
+```bash
+docker run -it myrepo/java-app:1.0 bash
+```
+Test:
+
+```bash
+cd /home/app
+java Hello
+```
+<img width="558" height="127" alt="Screenshot 2026-02-06 at 12 19 53 PM" src="https://github.com/user-attachments/assets/f7711224-cb9b-446c-a15d-dbba1907fea0" />
+
+Java and program already exist 🎉
+
+---
+
+## 7. Save / Load (Offline Transfer)
+
+### Save image to file
+
+```bash
+docker save -o java-app.tar myrepo/java-app:1.0
+```
+<img width="564" height="32" alt="Screenshot 2026-02-06 at 12 22 06 PM" src="https://github.com/user-attachments/assets/a35b019c-b044-4955-8b8e-f5baceb3c5cf" />
+
+Transfer the `.tar` file anywhere.
+
+### Load image
+
+```bash
+
+<img width="546" height="48" alt="Screenshot 2026-02-06 at 12 22 16 PM" src="https://github.com/user-attachments/assets/b7ba5030-df5a-46bc-83da-878ff3af67ed" />
+
+docker load -i java-app.tar
+```
+
+Check:
+
+```bash
+docker images
+```
+<img width="566" height="175" alt="Screenshot 2026-02-06 at 12 23 00 PM" src="https://github.com/user-attachments/assets/3133bb97-51c8-475e-99d1-62df7e2e14f6" />
+
+
+---
+
+## Export vs Save (Important Difference)
+
+### docker export
+
+```bash
+docker export java_lab > container.tar
+```
+
+Exports raw filesystem only.
+
+You lose:
+
+- image name
+- layers
+- metadata
+- CMD / ENTRYPOINT
+<img width="567" height="73" alt="Screenshot 2026-02-06 at 12 24 33 PM" src="https://github.com/user-attachments/assets/30d8e759-5101-4bc2-91c4-9c466727b6d2" />
+
+---
+
+### docker save (Recommended)
+
+```bash
+docker save -o image.tar myrepo/java-app:1.0
+```
+<img width="565" height="186" alt="Screenshot 2026-02-06 at 12 26 17 PM" src="https://github.com/user-attachments/assets/6d0b32d9-9f66-4eaa-b0d6-b4133f473fa1" />
+
+Keeps full image structure.
+
+---
+
+## Command Summary
+
+| Command | Purpose |
+|---------|---------|
+| docker commit | Container → Image |
+| docker save | Image → File |
+| docker load | File → Image |
+| docker push/pull | Registry sharing |
+| docker export/import | Raw filesystem only |
+
+---
+
+## Best Practice (Real Projects)
+
+Use Dockerfile instead of commit:
+
+```Dockerfile
+FROM ubuntu:22.04
+RUN apt update && apt install -y openjdk-17-jdk
+WORKDIR /home/app
+COPY Hello.java .
+RUN javac Hello.java
+CMD ["java", "Hello"]
+```
+
+Build image:
+
+```bash
+docker build -t java-app:2.0 .
+```
+<img width="1354" height="876" alt="Screenshot 2026-02-06 at 12 30 19 PM" src="https://github.com/user-attachments/assets/5351b98d-e819-4b46-a686-deb4e096643f" />
+<img width="1321" height="197" alt="Screenshot 2026-02-06 at 12 30 26 PM" src="https://github.com/user-attachments/assets/4b1f1c3a-37d5-46f2-8f99-5f86c061c7c4" />
+
+---
+
+
+
+
+
+
 
