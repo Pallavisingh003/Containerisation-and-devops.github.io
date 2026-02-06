@@ -1,6 +1,11 @@
 # LECTURE THEORY
 
+Name: Pallavi Singh
+Sap Id: 500119176
+Batch: 02 [CCVT]
+Roll Number: R2142230249
 
+---
 # Docker Commands & Flags – HandsOn Notes
 ## 1. Docker Basics
 
@@ -581,6 +586,7 @@ docker build -t java-app:2.0 .
 ---
 
 # ASSIGNMENT
+## Create a director for C and then make an image and a iontainer on Docker using GCC form Docker Hub.
 <img width="863" height="872" alt="Screenshot 2026-02-06 at 12 56 20 PM" src="https://github.com/user-attachments/assets/2aa0a2ab-ccd7-4d3c-aaec-4703a0244f7c" />
 <img width="893" height="282" alt="Screenshot 2026-02-06 at 12 56 32 PM" src="https://github.com/user-attachments/assets/264c55dd-ec34-4727-bce5-3170b1146c4f" />
 <img width="955" height="42" alt="Screenshot 2026-02-06 at 12 57 15 PM" src="https://github.com/user-attachments/assets/a4cc0de4-f5b5-4a95-baad-995039e9a7ac" />
