@@ -6,60 +6,80 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f7fa;
-    color: #333;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+  color: #333;
 }
 
 header {
-    background: #0d47a1;
-    color: white;
-    padding: 30px;
-    text-align: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+  padding: 40px;
+  text-align: center;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+header h1 {
+  margin: 0;
+  font-size: 36px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+.profile {
+  background: white;
+  margin: 30px auto;
+  padding: 25px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
-    margin-top: 0;
+.profile table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+.profile td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.info-item {
-    padding: 8px;
-    background: #e3f2fd;
-    border-radius: 6px;
+.section {
+  width: 80%;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-a {
-    text-decoration: none;
-    color: #0d47a1;
-    font-weight: bold;
+.section h2 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+.experiment-list a {
+  display: block;
+  padding: 12px;
+  margin: 8px 0;
+  background: #e0e7ff;
+  text-decoration: none;
+  border-radius: 6px;
+  color: #1e3a8a;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.experiment-list a:hover {
+  background: #1e3a8a;
+  color: white;
 }
 
 footer {
-    text-align: center;
-    padding: 15px;
-    background: #ddd;
-    margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: #0f172a;
+  color: white;
+  margin-top: 40px;
 }
 </style>
 </head>
@@ -67,50 +87,41 @@ footer {
 <body>
 
 <header>
-<h1>Containerisation & DevOps Lab</h1>
-<p>Hands-On Experiments Portal</p>
+  <h1>Containerisation & DevOps Lab</h1>
+  <p>Lab Experiments Documentation</p>
 </header>
 
-<div class="container">
-
-<div class="card">
-<h2>Student Information</h2>
-
-<div class="info-grid">
-<div class="info-item"><b>Name:</b> Pallavi Singh</div>
-<div class="info-item"><b>SAP ID:</b> 5000XXXX</div>
-<div class="info-item"><b>Batch:</b> BTech CSE</div>
-<div class="info-item"><b>Course:</b> Containerisation & DevOps</div>
-<div class="info-item"><b>Semester:</b> VI</div>
-<div class="info-item"><b>University:</b> UPES</div>
+<div class="profile">
+  <h2>Student Information</h2>
+  <table>
+    <tr><td><b>Name:</b></td><td>Pallavi Singh</td></tr>
+    <tr><td><b>SAP ID:</b></td><td>XXXXXXXX</td></tr>
+    <tr><td><b>Batch:</b></td><td>2023–2027</td></tr>
+    <tr><td><b>Course:</b></td><td>Containerisation & DevOps</td></tr>
+  </table>
 </div>
 
+<div class="section">
+  <h2>Experiments</h2>
+  <div class="experiment-list">
+    <a href="lab/exp1/README.md">Experiment 1 – VM vs Container Setup</a>
+    <a href="lab/exp2/README.md">Experiment 2 – Docker Installation</a>
+    <a href="#">Experiment 3 – Docker Images</a>
+    <a href="#">Experiment 4 – Container Deployment</a>
+  </div>
 </div>
 
-<div class="card">
-<h2>Experiments</h2>
-<ul>
-<li><a href="#">Experiment 1 – VM vs Container Setup</a></li>
-<li><a href="#">Experiment 2 – Docker Installation & Images</a></li>
-<li><a href="#">Experiment 3 – Container Persistence</a></li>
-<li><a href="#">Experiment 4 – Docker API Exposure</a></li>
-<li><a href="#">Experiment 5 – Docker Networking</a></li>
-</ul>
-</div>
-
-<div class="card">
-<h2>About This Lab</h2>
-<p>
-This portal contains all hands-on experiments performed in the
-Containerisation and DevOps laboratory. Each experiment includes
-theory, commands, screenshots, and explanation.
-</p>
-</div>
-
+<div class="section">
+  <h2>About This Repository</h2>
+  <p>
+    This website contains practical experiments and notes related to
+    Containerisation and DevOps. Each experiment includes theory,
+    screenshots, commands, and explanations.
+  </p>
 </div>
 
 <footer>
-© 2026 Pallavi Singh | GitHub Pages Lab Portal
+  © 2026 Pallavi Singh | GitHub Pages Lab Portfolio
 </footer>
 
 </body>
