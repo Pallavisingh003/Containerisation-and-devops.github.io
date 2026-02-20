@@ -114,6 +114,8 @@ docker run -d \
 <img width="1309" height="662" alt="Screenshot 2026-02-20 at 10 14 49 AM" src="https://github.com/user-attachments/assets/c92fa78c-a0f0-42d4-87c8-a5812793a869" />
 <img width="1440" height="673" alt="Screenshot 2026-02-20 at 10 15 01 AM" src="https://github.com/user-attachments/assets/1eef1fef-5d38-41a0-9b17-2cbb545eceb0" />
 <img width="1195" height="91" alt="Screenshot 2026-02-20 at 10 15 08 AM" src="https://github.com/user-attachments/assets/e185d118-9f88-49d3-b3bf-f547861114c2" />
+<img width="939" height="41" alt="Screenshot 2026-02-20 at 10 20 11 AM" src="https://github.com/user-attachments/assets/ef50bc28-8f2c-4fad-bb8d-a3d6b816a643" />
+<img width="1127" height="372" alt="Screenshot 2026-02-20 at 10 20 45 AM" src="https://github.com/user-attachments/assets/9c424a00-6e8a-479a-9b3e-e608b0970791" />
 
 
 
