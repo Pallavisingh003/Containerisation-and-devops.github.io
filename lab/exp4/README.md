@@ -1,4 +1,4 @@
-# 🚀 Experiment 4: Docker Essentials
+# Experiment 4: Docker Essentials
 ---
 Dockerfile .dockerignore tagging publishing
 Part 1: Containerizing Applications with Dockerfile
@@ -395,5 +395,33 @@ docker image prune
 
 # Remove everything unused
 docker system prune -a
+
+# SCREENSHORTS
+<img width="506" height="51" alt="Screenshot 2026-02-20 at 11 16 18 AM" src="https://github.com/user-attachments/assets/61eb9686-7392-435c-826b-c85c96ee4d94" />
+<img width="507" height="55" alt="Screenshot 2026-02-20 at 11 16 25 AM" src="https://github.com/user-attachments/assets/f61d861e-56f5-4a34-a100-fc6954d55d62" />
+<img width="466" height="242" alt="Screenshot 2026-02-20 at 11 19 57 AM" src="https://github.com/user-attachments/assets/feb5b3d9-1929-45bd-907a-2e3cabbf547c" />
+<img width="563" height="344" alt="Screenshot 2026-02-20 at 11 21 25 AM" src="https://github.com/user-attachments/assets/d7991ec1-b4be-4d97-a7fa-a95374af1d2c" />
+<img width="554" height="37" alt="Screenshot 2026-02-20 at 11 21 37 AM" src="https://github.com/user-attachments/assets/c08e6fac-234a-44c6-9968-dd936ab663ed" />
+<img width="560" height="62" alt="Screenshot 2026-02-20 at 11 22 11 AM" src="https://github.com/user-attachments/assets/2ab67b44-13a8-4d2e-8be8-d58cac1a2815" />
+<img width="562" height="349" alt="Screenshot 2026-02-20 at 11 23 36 AM" src="https://github.com/user-attachments/assets/11a1f830-383d-43ac-8752-da3ffa7200c6" />
+<img width="529" height="243" alt="Screenshot 2026-02-20 at 11 23 58 AM" src="https://github.com/user-attachments/assets/ce5940bb-7a05-4a3f-a086-57ddaadc3fcd" />
+<img width="485" height="46" alt="Screenshot 2026-02-20 at 11 24 13 AM" src="https://github.com/user-attachments/assets/c556d908-24c5-4d1b-b897-84e313377728" />
+<img width="570" height="266" alt="Screenshot 2026-02-20 at 11 25 00 AM" src="https://github.com/user-attachments/assets/9c08d9de-7785-4244-8ed9-c519b9f7c6b2" />
+<img width="547" height="34" alt="Screenshot 2026-02-20 at 11 25 14 AM" src="https://github.com/user-attachments/assets/54adb5b6-97fa-4405-9b4d-05c57cb65e12" />
+<img width="914" height="508" alt="Screenshot 2026-02-20 at 11 25 51 AM" src="https://github.com/user-attachments/assets/69d390ab-1be4-464d-97b6-90354c687d51" />
+<img width="641" height="301" alt="Screenshot 2026-02-20 at 11 26 07 AM" src="https://github.com/user-attachments/assets/1038eb25-779e-4721-baab-c13338733648" />
+<img width="566" height="101" alt="Screenshot 2026-02-20 at 11 28 23 AM" src="https://github.com/user-attachments/assets/2033e14d-b615-4e17-866b-a80a287ad92a" />
+<img width="826" height="148" alt="Screenshot 2026-02-20 at 11 29 53 AM" src="https://github.com/user-attachments/assets/136633d6-5073-4a5d-8455-102ad2815865" />
+<img width="572" height="92" alt="Screenshot 2026-02-20 at 11 30 49 AM" src="https://github.com/user-attachments/assets/39622e15-cafe-4cd6-8ef2-eba60f10cf21" />
+<img width="1062" height="140" alt="Screenshot 2026-02-20 at 11 34 53 AM" src="https://github.com/user-attachments/assets/2ca7fa6a-75bb-4101-b4f1-530bbfaeda08" />
+<img width="1059" height="366" alt="Screenshot 2026-02-20 at 11 35 16 AM" src="https://github.com/user-attachments/assets/134145d7-21f8-4c03-95dc-46eefeaddba0" />
+<img width="1122" height="761" alt="Screenshot 2026-02-20 at 11 35 59 AM" src="https://github.com/user-attachments/assets/9adc50ce-9f13-4de3-8892-bcd5fe016907" />
+<img width="842" height="367" alt="Screenshot 2026-02-20 at 11 41 55 AM" src="https://github.com/user-attachments/assets/0d089494-188d-485a-b8a2-be224d36830f" />
+<img width="889" height="378" alt="Screenshot 2026-02-20 at 11 42 16 AM" src="https://github.com/user-attachments/assets/f70654f4-94b4-44e3-92b9-3dcc4094d9a4" />
+<img width="858" height="132" alt="Screenshot 2026-02-20 at 11 42 51 AM" src="https://github.com/user-attachments/assets/817da431-d187-4eaa-b436-50a94e318f1a" />
+<img width="882" height="408" alt="Screenshot 2026-02-20 at 11 47 00 AM" src="https://github.com/user-attachments/assets/630e6ed8-0ce8-4409-adb0-7f0759af8242" />
+<img width="788" height="109" alt="Screenshot 2026-02-20 at 11 49 15 AM" src="https://github.com/user-attachments/assets/19b5ac64-7c58-46c7-b73d-ded47f9825b8" />
+<img width="1440" height="52" alt="Screenshot 2026-03-02 at 4 04 21 PM" src="https://github.com/user-attachments/assets/771ed335-87fd-4fbf-9846-9173935b537b" />
+<img width="1022" height="492" alt="Screenshot 2026-03-02 at 4 04 31 PM" src="https://github.com/user-attachments/assets/b495feb1-9b9f-4c1f-b27b-d20ff3c5f3a8" />
 
 ---
