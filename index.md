@@ -17,3 +17,4 @@
 - [Experiment 3 – Docker Deploy NGINX Using Different Base Images and Comparing Image Layers](lab/exp3/README.md)
 - [Experiment 4 – Docker Essentials](lab/exp4/README.md)
 - [Experiment 5 – Docker - Volumes, Environment Variables, Monitoring & Networks](lab/exp5/README.md)
+- [Experiment 6 – Comparison of Docker Run and Docker Compose](lab/exp6/README.md)
