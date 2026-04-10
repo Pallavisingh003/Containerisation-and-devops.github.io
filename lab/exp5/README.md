@@ -10,6 +10,7 @@ exit
 🔹 Step 2: Restart container
 docker start test
 docker exec test cat file.txt
+<img width="548" height="63" alt="Screenshot 2026-04-10 at 4 16 18 PM" src="https://github.com/user-attachments/assets/e2da1b42-4483-466d-9fa0-4106d2e01ec4" />
 
 🔹 Step 3: Run container with volume
 docker run -it --name mycontainer -v myvolume:/data ubuntu bash
@@ -22,6 +23,8 @@ exit
 docker start mycontainer
 docker exec mycontainer cat /data/file.txt
 <img width="548" height="63" alt="Screenshot 2026-04-10 at 4 16 18 PM" src="https://github.com/user-attachments/assets/5afdf205-3330-4445-bb51-7b142bb3cad9" />
+
+
 🔹 Step 5: List volumes
 docker volume ls
 
@@ -30,18 +33,22 @@ docker volume ls
 PART 2: Environment Variables
 🔹 Step 1: Run container with env variable
 docker run -d --name envtest -e NAME=Pallavi nginx
+<img width="570" height="127" alt="Screenshot 2026-04-10 at 4 19 45 PM" src="https://github.com/user-attachments/assets/8b73429a-d464-469f-bd63-f76a8e5a3f9f" />
 
 🔹 Step 2: Check variable
 docker exec envtest printenv NAME
+<img width="568" height="103" alt="Screenshot 2026-04-10 at 4 18 24 PM" src="https://github.com/user-attachments/assets/5a25d928-9b35-4d26-9829-76d2d3de11ac" />
 
 🔹 Step 3: Create .env file
 nano myenv.env
 Add:
 CITY=Dehradun
 COURSE=Cloud
+<img width="570" height="127" alt="Screenshot 2026-04-10 at 4 19 45 PM" src="https://github.com/user-attachments/assets/24b11b06-2688-4bbb-b273-3eb8845e1242" />
 
 🔹 Step 4: Run using env file
 docker run -d --name envfiletest --env-file myenv.env nginx
+<img width="551" height="87" alt="Screenshot 2026-04-10 at 4 19 12 PM" src="https://github.com/user-attachments/assets/52e6e00a-d606-4009-98bc-2841e0f4d262" />
 
 🔹 Step 5: Verify variable
 docker exec envfiletest printenv CITY
