@@ -73,6 +73,10 @@ server2 ansible_host=localhost ansible_port=2202
 server3 ansible_host=localhost ansible_port=2203
 server4 ansible_host=localhost ansible_port=2204
 
+
+<img width="533" height="21" alt="Screenshot 2026-04-24 at 8 49 07 PM" src="https://github.com/user-attachments/assets/4cbc2ed0-9cc9-43b8-a322-540485352e8d" />
+<img width="563" height="338" alt="Screenshot 2026-04-24 at 8 48 55 PM" src="https://github.com/user-attachments/assets/3eb232d8-bff9-4b81-8c33-d33270d5aa27" />
+
 ---
 Step 9: Test SSH (One Time)
 ssh -i ~/.ssh/id_rsa root@localhost -p 2201
@@ -83,6 +87,9 @@ Repeat for all servers.
 ---
 Step 10: Test Ansible Connection
 ansible all -i inventory.ini -m ping
+
+
+<img width="568" height="258" alt="Screenshot 2026-04-24 at 8 50 30 PM" src="https://github.com/user-attachments/assets/ef2bc4c2-5d1a-4484-8f2a-0481d5bccc50" />
 
 ---
 Step 11: Create Playbook
