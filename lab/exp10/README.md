@@ -8,6 +8,8 @@ docker --version
 mvn -version
 java -version
 
+<img width="569" height="235" alt="Screenshot 2026-04-24 at 11 15 40 PM" src="https://github.com/user-attachments/assets/f0b3885a-0b7c-41e4-810a-7921a5770915" />
+
 
 ---
 Step 2: Create SonarQube Setup
