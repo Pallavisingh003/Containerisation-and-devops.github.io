@@ -19,3 +19,5 @@
 - [Experiment 5 – Docker - Volumes, Environment Variables, Monitoring & Networks](lab/exp5/README.md)
 - [Experiment 6 – Comparison of Docker Run and Docker Compose](lab/exp6/README.md)
 - [Experiment 7 – Implementation of CI/CD Pipeline using Jenkins, Docker and GitHub](lab/exp7/README.md)
+- [Experiment 9 – Ansible](lab/exp9/README.md)
+- [Experiment 10 – SonarQube — Static Code Analysis](lab/exp10/README.md)
