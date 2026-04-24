@@ -2,6 +2,8 @@ Step 1: Install Ansible
 brew install ansible
 Check version:
 ansible --version
+
+
 <img width="1015" height="843" alt="Screenshot 2026-04-24 at 8 32 25 PM" src="https://github.com/user-attachments/assets/76caaff2-719d-413d-8737-6d3cf67ed17b" />
 <img width="711" height="869" alt="Screenshot 2026-04-24 at 8 32 37 PM" src="https://github.com/user-attachments/assets/e9168bdf-7acf-42d2-afcf-0c4cef37ae1f" />
 <img width="1319" height="837" alt="Screenshot 2026-04-24 at 8 32 53 PM" src="https://github.com/user-attachments/assets/c74f6fd5-e7f3-4afe-af33-f45401b90d43" />
@@ -15,6 +17,7 @@ Install Docker Desktop
 Open Docker and ensure it is running
 Check:
 docker info
+
 
 ---
 Step 3: Create SSH Key
@@ -32,12 +35,24 @@ Copy keys:
 cp ~/.ssh/id_rsa .
 cp ~/.ssh/id_rsa.pub .
 
+
+<img width="468" height="30" alt="Screenshot 2026-04-24 at 8 42 03 PM" src="https://github.com/user-attachments/assets/d6438aea-8098-4750-bbb6-97e56079a805" />
+<img width="554" height="32" alt="Screenshot 2026-04-24 at 8 43 01 PM" src="https://github.com/user-attachments/assets/e9ae3085-1d3a-4015-8a77-70160efb6d21" />
+
+
 ---
 Step 5: Create Dockerfile
+
+
+<img width="550" height="31" alt="Screenshot 2026-04-24 at 8 43 07 PM" src="https://github.com/user-attachments/assets/978c99fc-a34f-4b50-b3c3-1b1ff1d2c650" />
+<img width="840" height="304" alt="Screenshot 2026-04-24 at 8 43 23 PM" src="https://github.com/user-attachments/assets/bffdda36-d90c-44bf-813b-b6d4c96689bb" />
 
 ---
 Step 6: Build Docker Image
 docker build -t ubuntu-server .
+
+
+<img width="1437" height="427" alt="Screenshot 2026-04-24 at 8 46 30 PM" src="https://github.com/user-attachments/assets/a052acb2-f09b-4038-b1cf-4830f2d6763c" />
 
 ---
 Step 7: Run 4 Servers
@@ -45,6 +60,9 @@ docker run -d -p 2201:22 --name server1 ubuntu-server
 docker run -d -p 2202:22 --name server2 ubuntu-server
 docker run -d -p 2203:22 --name server3 ubuntu-server
 docker run -d -p 2204:22 --name server4 ubuntu-server
+
+
+<img width="645" height="124" alt="Screenshot 2026-04-24 at 8 48 33 PM" src="https://github.com/user-attachments/assets/173c257e-3135-4a05-add0-3c5ad158ab1f" />
 
 ---
 Step 8: Create Inventory File
