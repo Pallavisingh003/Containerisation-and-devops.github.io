@@ -94,19 +94,33 @@ ansible all -i inventory.ini -m ping
 ---
 Step 11: Create Playbook
 
+
+<img width="540" height="26" alt="Screenshot 2026-04-24 at 8 53 06 PM" src="https://github.com/user-attachments/assets/e69b0ebd-7608-4165-af75-c14eeb753da6" />
+<img width="549" height="24" alt="Screenshot 2026-04-24 at 8 50 47 PM" src="https://github.com/user-attachments/assets/924b75f1-7d07-4239-9448-f12c72e41ef4" />
+<img width="567" height="339" alt="Screenshot 2026-04-24 at 8 54 59 PM" src="https://github.com/user-attachments/assets/e9579cb5-92d3-40e9-8273-31dc81d364a0" />
+
 ---
 Step 12: Run Playbook
 ansible-playbook -i inventory.ini playbook.yml
 
+
+<img width="937" height="476" alt="Screenshot 2026-04-24 at 8 54 30 PM" src="https://github.com/user-attachments/assets/960b8b21-3cdf-4477-aa70-16f8ce8cbdef" />
+
 ---
 Step 13: Verify Output
 ansible all -i inventory.ini -m command -a "cat /root/ansible_test.txt"
+
+
+<img width="570" height="147" alt="Screenshot 2026-04-24 at 8 55 45 PM" src="https://github.com/user-attachments/assets/65366911-26e3-4654-a3ba-ac5daa45520e" />
 
 ---
 Step 14: Cleanup
 for i in {1..4}; do
   docker rm -f server${i}
 done
+
+
+<img width="546" height="98" alt="Screenshot 2026-04-24 at 8 56 03 PM" src="https://github.com/user-attachments/assets/60b19023-1472-4c84-8a8a-a75b217bb075" />
 
 ---
 
