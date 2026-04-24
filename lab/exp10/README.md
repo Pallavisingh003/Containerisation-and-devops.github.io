@@ -54,11 +54,6 @@ Change password on first login.
 
 <img width="1120" height="778" alt="Screenshot 2026-04-24 at 9 34 39 PM" src="https://github.com/user-attachments/assets/0c332064-2948-4c86-a23e-a533ff852e38" />
 
-<img width="1292" height="488" alt="Screenshot 2026-04-24 at 9 36 41 PM" src="https://github.com/user-attachments/assets/47799a82-4cf5-4674-a948-2d631ec14579" />
-
-<img width="984" height="410" alt="Screenshot 2026-04-24 at 9 36 55 PM" src="https://github.com/user-attachments/assets/9fc0139e-bcc6-4b90-aca4-9e4f85613d00" />
-
-
 ---
 Step 4: Generate Authentication Token
 Click profile icon (top right)
