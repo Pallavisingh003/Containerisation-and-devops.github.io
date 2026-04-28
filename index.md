@@ -21,3 +21,5 @@
 - [Experiment 7 – Implementation of CI/CD Pipeline using Jenkins, Docker and GitHub](lab/exp7/README.md)
 - [Experiment 9 – Ansible](lab/exp9/README.md)
 - [Experiment 10 – SonarQube — Static Code Analysis](lab/exp10/README.md)
+- [Experiment 11 – Orchestration using Docker Compose & Docker Swarms](lab/exp11/README.md)
+- [Experiment 12 – Study and Analyse Container Orchestration using Kubernetes](lab/exp12/README.md)
